@@ -15,10 +15,10 @@ jobs:
           fetch-depth: 0
       - name: Add remote
         env:
-          HF: ${{ secrets.HF }}
+          HF: ${{ secrets.HG }}
         run: git remote add space https://AshishT:$HF@huggingface.co/spaces/AshishT/LanguageModel
       - name: Push to hub
         env:
-          HF: ${{ secrets.HF }}
+          HF: ${{ secrets.HG }}
         run: git push --force https://AshishT:$HF@huggingface.co/spaces/AshishT/LanguageModel main
   
